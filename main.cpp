@@ -29,9 +29,9 @@ int main(int argc, char const *argv[])
     string fn_signature = "def ";
 
     ss << "find " << src_dir << " -name *." << language << "|xargs grep -Hin \'" << fn_signature << func_name << "\' ";
+    string command = ss.str();
     system(command.c_str());
     
-    string command = ss.str();
     cout << command << endl;
 
     return 0;
